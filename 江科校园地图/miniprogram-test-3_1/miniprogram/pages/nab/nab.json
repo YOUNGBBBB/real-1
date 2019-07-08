@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "teach": "../teach/teach",
+    "Dormitory":"../Dormitory/Dormitory",
+    "Life":"../Life/Life",
+    "Library":"../Library/Library",
+    "searchbar": "../searchbar/searchbar",
+    "express": "../express/express"
+  }
+}

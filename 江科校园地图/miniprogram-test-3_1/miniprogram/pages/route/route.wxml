@@ -1,0 +1,39 @@
+<!--pages/route/route.wxml-->
+<view class='top'>
+ <form bindsubmit="formSubmit">
+<!--输入起点和目的地经纬度坐标，格式为string格式-->
+  <view class='insert'></view>
+      <view class='second'   >
+        <view class='text'>
+            <view style=' margin: 0 200rpx 0;'>
+              <text  style='color:white;'name="start">我的位置</text>
+            </view>
+        </view>
+      </view>
+      <view class='insert'></view>
+        <view class='second' hover-class="bg-a" bindtap='getLocation' >
+        <!-- 终点位置 -->
+        <view class='text' >
+              <text  class="text_a" name="dest" >{{name}}</text>
+        </view>
+      </view>
+
+         <button bindtap='luxian' class="kaishi" form-type="submit">获取路线</button> 
+    </form> 
+</view>
+<map
+id="myMap"
+style="width: 100%; height: 900rpx;"
+longitude="{{longitude}}" latitude="{{latitude}}"
+scale='16'
+ markers="{{markers}}"
+polyline="{{polyline}}"
+show-location
+>
+<cover-view class='juli' wx:if="{{luxian}}">
+  <cover-view class='juli_two'>
+  距离:{{distance}}米
+  </cover-view>
+</cover-view>
+
+</map>

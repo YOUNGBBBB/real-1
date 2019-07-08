@@ -1,0 +1,21 @@
+<!--pages/nab/nab.wxml-->
+<view class="main">
+  <!-- 公共头部 -->
+  <!-- 首页导航 -->
+  <view class='nav_wrap'>
+    <!-- 自己滚动区域 -->
+    <scroll-view scroll-x scroll-with-animation="ture" class="nav">
+      <view bindtap='activeNav' data-index="{{index}}" class="nav_item {{ index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{index}">{{item.text}}</view>
+    </scroll-view>
+     <searchbar></searchbar>
+  </view>
+</view>
+<view class="weui-tab__panel">
+  <view class="weui-tab__content" hidden="{{currentIndexNav != 0}}">
+    <teach></teach>
+  </view>
+  <view class="weui-tab__content" hidden="{{currentIndexNav != 1}}"><Dormitory></Dormitory></view>
+  <view class="weui-tab__content" hidden="{{currentIndexNav != 2}}"><Life></Life></view>
+  <view class="weui-tab__content" hidden="{{currentIndexNav != 3}}"><Library></Library></view>
+  <view class="weui-tab__content" hidden="{{currentIndexNav != 4}}"><express></express></view>
+</view>

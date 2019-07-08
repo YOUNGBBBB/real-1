@@ -1,0 +1,25 @@
+<!--pages/Library/Library.wxml-->
+<view class="page-body">
+  <view class="page-section page-section-gap">
+
+    <map id="myMap" scale='{{scale}}' style="width: 100%; height: 1180rpx;" latitude="28.679432081694014" longitude="116.0195382158587" markers="{{markers}}" polyline="{{polyline}}" show-location>
+    
+    
+    
+    <!-- 路线 -->
+     <cover-view bindtap='showInput'  class='lx'>
+      <cover-image src='/images/路线(1).png'></cover-image>
+      </cover-view>
+   
+    <!-- 按钮 -->
+    <cover-view bindtap='moveToLocation'  class='zj'>
+      <cover-image src='/images/定位.png' ></cover-image>
+      </cover-view>
+      
+    
+    </map>
+
+
+  </view>
+  
+</view>
